@@ -9,5 +9,9 @@ Edit `Dockerfile` and enter your bot token and user id.
 Run build and run container like this:
 
 ```
-$ docker build -t MusicBot . && docker run MusicBot
+$ docker build -t musicbot .
+$ docker run -d --restart=always musicbot
 ```
+
+This will make the container run at startup and restart if it crashes.
+
