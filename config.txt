@@ -29,7 +29,7 @@ owner = ##owner
 // If you do not set this, the prefix will be a mention of the bot (@Botname play)
 // If you make this blank, the bot will not use a prefix
 
-prefix = "##prefix"
+prefix = "!"
 
 
 // If you set this, it modifies the default game of the bot
@@ -39,7 +39,7 @@ prefix = "##prefix"
 // where X is the title. If you don't include an action, it will use the
 // default of "Playing"
 
-game = "DEFAULT"
+game = "Pathfinder"
 
 
 // If you set this, it will modify the default status of bot
@@ -52,7 +52,7 @@ status = ONLINE
 // "Playing" status. Note that this will ONLY work if the bot is playing music on ONE guild;
 // if the bot is playing on multiple guilds, this will not work.
 
-songinstatus=false
+songinstatus=true
 
 
 // If you set this, the bot will also use this prefix in addition to
@@ -114,7 +114,7 @@ updatealerts=true
 // Changing this changes the lyrics provider
 // Currently available providers: "A-Z Lyrics", "Genius", "MusicMatch"
 // At the time of writing, I would recommend sticking with A-Z Lyrics or MusicMatch,
-// as Genius tends to have a lot of non-song results and you might get something
+// as Genius tends to have a lot of non-song results and you might get something 
 // completely unrelated to what you want.
 // If you are interested in contributing a provider, please see
 // https://github.com/jagrosh/JLyrics
@@ -138,7 +138,7 @@ aliases {
   // Music commands
   lyrics = []
   nowplaying = [ np, current ]
-  play = []
+  play = [p]
   playlists = [ pls ]
   queue = [ list ]
   remove = [ delete ]
@@ -158,7 +158,7 @@ aliases {
   forceskip = [ modskip ]
   movetrack = [ move ]
   pause = []
-  playnext = []
+  playnext = [next]
   repeat = []
   skipto = [ jumpto ]
   stop = []
