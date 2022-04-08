@@ -20,7 +20,7 @@ $ cd discord-musicbot-docker
 
 // Build and run the bot
 $ docker build -t musicbot .
-$ docker run -d --restart=always musicbot
+$ docker run -d --restart=always --name=musicbot musicbot
 ```
 
 > The `--restart=always` flag will run the container at startup and restart if it crashes.
