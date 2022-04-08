@@ -12,6 +12,6 @@ RUN sed -i 's/##prefix/'$prefix'/g' config.txt
 
 RUN apt update
 RUN apt install -y openjdk-11-jre wget
-RUN wget https://github.com/jagrosh/MusicBot/releases/download/0.3.1/JMusicBot-0.3.1.jar
+RUN wget https://github.com/jagrosh/MusicBot/releases/download/0.3.8/JMusicBot-0.3.8.jar
 
-CMD ["java", "-Dnogui=true", "-jar", "JMusicBot-0.3.1.jar"]
+CMD ["java", "-Dnogui=true", "-jar", "JMusicBot-0.3.8.jar"]
