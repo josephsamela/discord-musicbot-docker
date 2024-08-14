@@ -20,9 +20,27 @@ $ cd discord-musicbot-docker
 
 // Build and run the bot
 $ docker build -t musicbot .
-$ docker run -d --restart=always --name=musicbot musicbot
+$ docker run -d --restart=unless-stopped --name=musicbot musicbot
 ```
 
-> The `--restart=always` flag will run the container at startup and restart if it crashes.
+## Docker Compose
+
+Create a new service in your `docker-compose.yaml` file.
+
+```yaml
+musicbot:
+    container_name: musicbot
+    build:
+      context: ../discord-musicbot-docker
+      dockerfile: ../discord-musicbot-docker/Dockerfile
+    restart: unless-stopped
+```
+
+Then build and run the container like this.
+
+```
+$ docker compose up -d --build musicbot
+```
 
 After the bot is running, you'll need to [add the bot to your server](https://github.com/jagrosh/MusicBot/wiki/Adding-Your-Bot-To-Your-Server).
+
